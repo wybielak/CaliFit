@@ -45,7 +45,7 @@ export default class AppStorage {
     newExerciseName = ""
     newExerciseCount = 0
     newExerciseGoal = 0
-    newExerciseUnit = ""
+    newExerciseUnit = "serie"
 
     setExercises = (data: Texercise[]) => {
         this.exercises = data
@@ -107,6 +107,8 @@ export default class AppStorage {
     }
 
     addNewExercise = async () => {
+
+        if (this.newExerciseUnit == "") this.newExerciseUnit = "serie"
 
         if (this.newExerciseName != "" && this.newExerciseGoal != 0 && this.newExerciseUnit != "") {
             await addDoc(this.workoutRef, {

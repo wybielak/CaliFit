@@ -79,7 +79,6 @@ export default observer(function Home() {
           <div className="my-2 flex justify-between items-center">
             <label htmlFor="unit">Jednostka:</label>
             <select className="bg-dark rounded-md p-2 ml-2" id="unit" value={appStorage.newExerciseUnit} onChange={(e) => appStorage.setNewExerciseUnit(e.target.value)} >
-              <option value="">Wybierz</option>
               <option value="serie">Serie</option>
               <option value="powtórzenia">Powtórzenia</option>
               <option value="minuty">Minuty</option>
